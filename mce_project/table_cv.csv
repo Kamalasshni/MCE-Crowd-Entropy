@@ -1,0 +1,6 @@
+Method,MeanAcc,Std
+MCE (proposed),81.25,0.58
+Unidirectional entropy (x-direction),75.93,0.58
+Unidirectional entropy (speed magnitude),76.24,0.61
+Crowd pressure,71.95,0.71
+Crowd flow,54.49,0.48

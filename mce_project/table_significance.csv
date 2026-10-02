@@ -1,0 +1,5 @@
+Comparison,p_accuracy,p_leadtime,n_events_paired
+MCE vs Unidirectional entropy (x-direction),1.7714988658493234e-16,0.5680045980933788,1264
+MCE vs Unidirectional entropy (speed magnitude),8.518130880631389e-18,0.9312015127712682,1269
+MCE vs Crowd pressure,7.260379603508344e-15,6.700985829316619e-11,1246
+MCE vs Crowd flow,3.896559845095909e-18,0.7504239522212018,1264

@@ -1,0 +1,25 @@
+======================================================================
+CHECK 1: different danger thresholds for the labels (5-fold, run-level CV)
+======================================================================
+threshold=0.10 (critical=33.2% of windows)  MCE (proposed)                         acc= 81.8%  FAR= 6.7%
+threshold=0.10 (critical=33.2% of windows)  Unidirectional entropy (x-direction)   acc= 78.3%  FAR=10.2%
+threshold=0.10 (critical=33.2% of windows)  Crowd pressure                         acc= 71.3%  FAR= 9.1%
+
+threshold=0.20 (critical=26.0% of windows)  MCE (proposed)                         acc= 81.2%  FAR= 5.1%
+threshold=0.20 (critical=26.0% of windows)  Unidirectional entropy (x-direction)   acc= 75.9%  FAR= 6.5%
+threshold=0.20 (critical=26.0% of windows)  Crowd pressure                         acc= 71.9%  FAR= 7.2%
+
+threshold=0.30 (critical=18.1% of windows)  MCE (proposed)                         acc= 81.3%  FAR= 4.7%
+threshold=0.30 (critical=18.1% of windows)  Unidirectional entropy (x-direction)   acc= 76.5%  FAR= 5.8%
+threshold=0.30 (critical=18.1% of windows)  Crowd pressure                         acc= 71.8%  FAR= 7.8%
+
+======================================================================
+CHECK 2: leave-one-scenario-out (train on 4 scenarios, test on the unseen one)
+======================================================================
+Held-out scenario  MCE (proposed)  Unidirectional entropy (x-direction)  Crowd pressure
+   unidirectional            54.7                                  64.2            90.3
+      counterflow            81.1                                  64.8            74.0
+         crossing            70.7                                  62.3            57.2
+       bottleneck            72.4                                  77.0            75.1
+       evacuation            61.9                                  52.3            43.1
+             MEAN            68.2                                  64.1            67.9

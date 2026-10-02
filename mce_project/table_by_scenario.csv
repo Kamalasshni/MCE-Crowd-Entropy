@@ -1,0 +1,6 @@
+Scenario,MCE (proposed),Unidirectional entropy (x-direction),Unidirectional entropy (speed magnitude),Crowd pressure,Crowd flow
+unidirectional,90.1,89.7,82.1,92.8,35.5
+counterflow,83.7,77.3,78.7,74.1,54.7
+crossing,73.8,66.8,69.0,57.4,55.9
+bottleneck,87.1,79.2,81.1,76.2,60.4
+evacuation,72.4,68.9,70.0,62.4,58.6

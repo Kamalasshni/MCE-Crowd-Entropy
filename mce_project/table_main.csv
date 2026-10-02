@@ -1,0 +1,6 @@
+Method,Accuracy,Acc_std_over_folds,FalseAlarmRate,Sensitivity,Specificity,F1_critical,F1_macro,EventsDetected_pct,MeanLead_s,N_events
+MCE (proposed),81.25,0.58,5.11,70.31,94.89,0.76,0.73,98.27,0.96,1330
+Unidirectional entropy (x-direction),75.93,0.58,6.49,57.73,93.51,0.66,0.66,96.47,1.09,1330
+Unidirectional entropy (speed magnitude),76.24,0.61,8.69,64.47,91.31,0.68,0.67,96.54,0.99,1330
+Crowd pressure,71.95,0.71,7.18,54.48,92.82,0.62,0.61,94.81,0.85,1330
+Crowd flow,54.49,0.48,23.9,57.27,76.1,0.51,0.48,96.39,1.05,1330

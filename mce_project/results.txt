@@ -1,0 +1,53 @@
+======================================================================
+TABLE I-style: main comparison (5-fold, run-level cross-validation)
+======================================================================
+MCE (proposed)                             acc= 81.2%  FAR=  5.1%  sens= 70.3%  lead= 1.0s  detected=98.3%
+Unidirectional entropy (x-direction)       acc= 75.9%  FAR=  6.5%  sens= 57.7%  lead= 1.1s  detected=96.5%
+Unidirectional entropy (speed magnitude)   acc= 76.2%  FAR=  8.7%  sens= 64.5%  lead= 1.0s  detected=96.5%
+Crowd pressure                             acc= 71.9%  FAR=  7.2%  sens= 54.5%  lead= 0.9s  detected=94.8%
+Crowd flow                                 acc= 54.5%  FAR= 23.9%  sens= 57.3%  lead= 1.1s  detected=96.4%
+
+======================================================================
+Accuracy by flow scenario (MCE vs baselines)
+======================================================================
+      Scenario  MCE (proposed)  Unidirectional entropy (x-direction)  Unidirectional entropy (speed magnitude)  Crowd pressure  Crowd flow
+unidirectional            90.1                                  89.7                                      82.1            92.8        35.5
+   counterflow            83.7                                  77.3                                      78.7            74.1        54.7
+      crossing            73.8                                  66.8                                      69.0            57.4        55.9
+    bottleneck            87.1                                  79.2                                      81.1            76.2        60.4
+    evacuation            72.4                                  68.9                                      70.0            62.4        58.6
+
+======================================================================
+Confusion matrix for MCE (rows = true, columns = predicted)
+======================================================================
+                pred safe  pred congested  pred critical
+true safe           18882            2105            877
+true congested        347            2409            401
+true critical        1325            1287           6187
+
+======================================================================
+Ablation (same folds, same classifier)
+======================================================================
+Full MCE                             acc= 81.2%  FAR=  5.1%  F1(critical)=0.761
+Without directional entropy          acc= 79.9%  FAR=  5.4%  F1(critical)=0.751
+Without speed-variation entropy      acc= 80.9%  FAR=  5.6%  F1(critical)=0.753
+Without interaction force            acc= 77.3%  FAR=  7.6%  F1(critical)=0.687
+Without all three (density only)     acc= 61.2%  FAR= 12.6%  F1(critical)=0.484
+
+======================================================================
+Significance: MCE vs each baseline, paired Wilcoxon test over the 100 runs
+(each run = one paired accuracy value; windows inside a run are NOT treated as independent)
+======================================================================
+MCE vs Unidirectional entropy (x-direction)       p(acc)=1.77e-16  p(lead)=5.68e-01  (paired events: 1264)
+MCE vs Unidirectional entropy (speed magnitude)   p(acc)=8.52e-18  p(lead)=9.31e-01  (paired events: 1269)
+MCE vs Crowd pressure                             p(acc)=7.26e-15  p(lead)=6.70e-11  (paired events: 1246)
+MCE vs Crowd flow                                 p(acc)=3.90e-18  p(lead)=7.50e-01  (paired events: 1264)
+
+======================================================================
+Cross-validation fold-by-fold accuracy (mean +/- std)
+======================================================================
+MCE (proposed)                              81.2% +/- 0.6
+Unidirectional entropy (x-direction)        75.9% +/- 0.6
+Unidirectional entropy (speed magnitude)    76.2% +/- 0.6
+Crowd pressure                              71.9% +/- 0.7
+Crowd flow                                  54.5% +/- 0.5

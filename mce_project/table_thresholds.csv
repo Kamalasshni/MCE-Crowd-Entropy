@@ -1,0 +1,10 @@
+Threshold,Method,Accuracy,FAR,CriticalShare
+0.1,MCE (proposed),81.8,6.7,33.2
+0.1,Unidirectional entropy (x-direction),78.3,10.2,33.2
+0.1,Crowd pressure,71.3,9.1,33.2
+0.2,MCE (proposed),81.2,5.1,26.0
+0.2,Unidirectional entropy (x-direction),75.9,6.5,26.0
+0.2,Crowd pressure,71.9,7.2,26.0
+0.3,MCE (proposed),81.3,4.7,18.1
+0.3,Unidirectional entropy (x-direction),76.5,5.8,18.1
+0.3,Crowd pressure,71.8,7.8,18.1
